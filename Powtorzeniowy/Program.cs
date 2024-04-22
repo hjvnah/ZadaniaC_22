@@ -10,6 +10,7 @@ class PlikGłówny
         //wywołujemy funkcje tworzącą tablicę
         int[] tab = tablica.Tworzenie_tablicy();
         //wywołujemy metodę wyświetlającą tablicę
+        tablica.SortowanieBąbelkowe(tab);
         tablica.Wyswietl(tab);
     }
 }

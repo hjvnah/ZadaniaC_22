@@ -11,13 +11,13 @@ namespace Powtorzeniowy
         //tworzymy publiczne funckje w skrypcie Tablice
         public void Wyswietl(int[] tab)
         {
-            for(int = 0; int < tab.Length; i++)
+            for(int i = 0; i < tab.Length; i++)
             {
-                Console.Write(int[] tab)+ ", ");
+                Console.Write(tab[i]+ ", ");
             }
         }
         public int[] Tworzenie_tablicy()
-        {
+        {            
             //pobieramy dlugosc tablicy od uzytkownika
             Console.WriteLine("Ile znaków ma mieć tablica?");
             int dlugosc = int.Parse(Console.ReadLine());
@@ -33,5 +33,22 @@ namespace Powtorzeniowy
             }
             return ints;
         }
+        public void SortowanieBąbelkowe(int[] tab)
+        {
+            int n = tab.Length;
+            while ( n > 0)
+            {
+                for (int i = 0; i < n - 1; i++)
+                {
+                    if (tab[i] > tab[i + 1])
+                    {
+                       int nazwa = tab[i];
+                       tab[i] = tab[i + 1];
+                       tab[i + 1] = nazwa;
+                    }
+                }
+                n--;
+            }
+        } 
     }
 }
