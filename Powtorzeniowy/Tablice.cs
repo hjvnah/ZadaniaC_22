@@ -50,5 +50,30 @@ namespace Powtorzeniowy
                 n--;
             }
         } 
+        public void Przeszukaj(int[] tab)
+        {
+            Console.WriteLine("Jakiej liczby szukasz w tablicy? ");
+            int szukana = int.Parse(Console.ReadLine());
+
+           
+            bool liczba_istnieje = false;
+            int ile_powtorzen = 0;
+            for(int i = 0; i < tab.Length; i++)
+            {
+                if (tab[i] == szukana)
+                {
+                    liczba_istnieje = true;
+                    ile_powtorzen++;
+                }
+            }
+            if(liczba_istnieje == true)
+            {
+                Console.WriteLine($"liczba jest w tablicy występuje {ile_powtorzen} razy.");
+            }
+            else
+            {
+                Console.WriteLine("Liczby nie ma w tbalicy");
+            }
+        }
     }
 }
