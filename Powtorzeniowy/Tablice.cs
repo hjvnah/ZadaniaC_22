@@ -8,9 +8,13 @@ namespace Powtorzeniowy
 {
     public class Tablice
     {
-        public void Wyswietl()
+        //tworzymy publiczne funckje w skrypcie Tablice
+        public void Wyswietl(int[] tab)
         {
-            Console.WriteLine("To jest plik z tablicami");
+            for(int = 0; int < tab.Length; i++)
+            {
+                Console.Write(int[] tab)+ ", ");
+            }
         }
         public int[] Tworzenie_tablicy()
         {
